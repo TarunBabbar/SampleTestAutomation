@@ -17,8 +17,12 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium
       - name: Run API tests
         run: npx playwright test --project=api
+      - name: Run UI tests
+        run: npx playwright test --project=ui
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4

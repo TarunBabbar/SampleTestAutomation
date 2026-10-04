@@ -30,8 +30,9 @@ Override targets with `API_BASE_URL` / `UI_BASE_URL`.
 src/api/RestfulBooker.ts   thin API client (auth, booking CRUD)
 src/data/booking.ts        test-data factories (unique per call, parallel-safe)
 src/fixtures/api.ts        Playwright fixtures: `api` client + `token`
+src/pages/                 page objects (HomePage, AdminLoginPage)
 tests/api/                 API specs (health, auth, booking, negative)
-tests/ui/                  UI specs (added in the next pass)
+tests/ui/                  UI specs (public site, admin login)
 ```
 
 ## Conventions
